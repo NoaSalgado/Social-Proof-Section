@@ -1,0 +1,117 @@
+:root {
+  --clr-primary-dark: hsl(300, 43%, 22%);
+  --clr-primary-soft: hsl(333, 80%, 67%);
+  --clr-secondary-dark: hsl(303, 10%, 53%);
+  --clr-secondary-light: hsl(300, 24%, 96%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  font-size: 62.5%;
+}
+
+/* Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Globals */
+body {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* Typography */
+.section-title,
+.rating-platform {
+  color: var(--clr-primary-dark);
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: 4.8rem;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-description {
+  color: var(--clr-secondary-dark);
+  text-align: center;
+}
+
+.reviewer-name,
+.review-text {
+  color: var(--clr-white);
+}
+
+.reviewer-name {
+  font-weight: 500;
+}
+
+.reviewer-name span {
+  color: var(--clr-primary-soft);
+}
+
+/* Layout */
+.main {
+  width: 90%;
+  max-width: 1440px;
+}
+
+.social-proof {
+  background-image: url('../images/bg-pattern-top-mobile.svg'),
+    url('../images/bg-pattern-bottom-mobile.svg');
+  background-position: top right, bottom center;
+  background-repeat: no-repeat, no-repeat;
+  padding: 2rem;
+  display: grid;
+  gap: 3rem;
+}
+
+.ratings-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.rating {
+  background-color: var(--clr-secondary-light);
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.rating-stars {
+  margin-bottom: 1rem;
+}
+
+.reviews-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.review {
+  background-color: var(--clr-primary-dark);
+  border-radius: 0.8rem;
+  padding: 3rem;
+}
+
+.reviewer {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.reviewer-img {
+  border-radius: 50%;
+  display: block;
+}

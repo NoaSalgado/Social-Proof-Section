@@ -48,8 +48,7 @@ body {
   text-align: center;
 }
 
-.reviewer-name,
-.review-text {
+.reviewer-name {
   color: var(--clr-white);
 }
 
@@ -59,6 +58,10 @@ body {
 
 .reviewer-name span {
   color: var(--clr-primary-soft);
+}
+
+.review-text {
+  color: var(--clr-secondary-light);
 }
 
 /* Layout */
@@ -72,9 +75,10 @@ body {
     url('../images/bg-pattern-bottom-mobile.svg');
   background-position: top right, bottom center;
   background-repeat: no-repeat, no-repeat;
-  padding: 2rem;
+  padding: 10rem 2rem 2rem 4rem;
   display: grid;
   gap: 3rem;
+  min-height: 100vh;
 }
 
 .ratings-container {
@@ -91,6 +95,10 @@ body {
 
 .rating-stars {
   margin-bottom: 1rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .reviews-container {
@@ -114,4 +122,88 @@ body {
 .reviewer-img {
   border-radius: 50%;
   display: block;
+}
+
+.reviewer-name span {
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  .section-title,
+  .section-description {
+    text-align: left;
+  }
+
+  .social-proof {
+    background-image: url('../images/bg-pattern-top-desktop.svg'),
+      url('../images/bg-pattern-bottom-desktop.svg');
+    background-position: top left, bottom right;
+    padding-top: 15rem;
+
+    grid-template-columns: 1fr 2fr;
+    gap: 5rem;
+  }
+
+  .header {
+    grid-column: 1 / 2;
+  }
+
+  .ratings-container {
+    padding-top: 4rem;
+    grid-column: 2 / 3;
+
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    gap: 2rem;
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .rating:first-child {
+    grid-column: 4 / 9;
+    grid-row: 1 / 2;
+  }
+
+  .rating:nth-child(2) {
+    grid-column: 5/ 10;
+    grid-row: 2 / 3;
+  }
+
+  .rating:last-child {
+    grid-column: 6 / 11;
+    grid-row: 3 / 4;
+  }
+
+  .rating-stars {
+    margin-bottom: 0;
+  }
+
+  .reviews-container {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(10, min-content);
+    gap: 4rem;
+  }
+
+  .review:first-child {
+    grid-column: 1 / 2;
+    grid-row: 1/9;
+  }
+
+  .review:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 2/10;
+  }
+
+  .review:last-child {
+    grid-column: 3 / 4;
+    grid-row: 3 / 11;
+  }
 }
